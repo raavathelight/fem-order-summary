@@ -22,13 +22,16 @@
         margin: 0;
         padding: 0;
         background: url("./images/pattern-background-desktop.svg");
-        background-color:hsl(225, 100%, 94%); 
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: hsl(225, 100%, 94%);
         display: flex;
         flex-wrap: wrap;
         flex: 1;
         justify-content: center;
         align-items: center;
-        font-family: "Red Hat Display";
+        font-family: "Red Hat Display", sans-serif;
+        min-height: 100vh;
       }
 
       .attribution {
@@ -61,6 +64,8 @@
         text-align: center;
         font-weight: 900;
         color: #213152;
+        margin-top: 20px;
+        font-size: 1.17em;
       }
 
       .description {
@@ -98,18 +103,6 @@
         flex-direction: column;
       }
 
-      .proceed {
-        color: white;
-        background-color: #382ae1;
-        border: none;
-        border-radius: 0.5em;
-        width: 80%;
-        font-family: "Red Hat Display";
-        padding: 10px 5px;
-        box-shadow: #bdbed1;
-        margin: 10px 0px;
-      }
-
       .change-link {
         font-size: 12px;
         margin-top: 18px;
@@ -117,75 +110,106 @@
         margin-right: 10px;
       }
 
+      .change-link:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: #766cf1;
+      }
+
       .annual-class {
-        font-size: x-small;
+        font-size: 12px;
         font-weight: 900;
         padding-bottom: 0px;
       }
 
       .price-class {
-        font-size: x-small;
+        font-size: 12px;
         font-weight: 900;
         color: #adadbb;
+      }
+
+      .proceed {
+        color: white;
+        background-color: #382ae1;
+        border: none;
+        border-radius: 0.5em;
+        width: 80%;
+        font-family: "Red Hat Display", sans-serif;
+        padding: 10px 5px;
+        box-shadow: #bdbed1;
+        margin: 15px 0px;
+        font-size: 10px;
+      }
+
+      .proceed:hover {
+        cursor: pointer;
+        background-color: #766cf1;
       }
 
       .cancel-button {
         color: #adadbb;
         font-weight: 500;
-        font-size: 15px;
+        font-size: 10px;
         padding-bottom: 15px;
+      }
+
+      .cancel-button:hover {
+        color: #363e55;
+        cursor: pointer;
       }
     </style>
   </head>
 
   <body>
-    <div class="column">
-      <div class="card">
-        <img
-          class="hero"
-          src="./images/illustration-hero.svg"
-          alt="illustration-hero"
-        />
-        <div class="title"><h3>Order Summary</h3></div>
+    <main>
+      <div class="column">
+        <div class="card">
+          <img
+            class="hero"
+            src="./images/illustration-hero.svg"
+            alt="illustration-hero"
+          />
+          <div class="title">Order Summary</div>
 
-        <div class="description">
-          <h5>
-            You can now listen to millions of songs, audiobooks, and podcasts on
-            any device anywhere you like!
-          </h5>
-        </div>
-
-        <center>
-          <div class="row box">
-            <img
-              src="./images/icon-music.svg"
-              alt="icon-music"
-              width="40px"
-              height="40px"
-              style="margin: 6px"
-            />
-            <div class="price-description">
-              <span class="annual-class">Annual Plan</span>
-              <span class="price-class">$59.99/year</span>
-            </div>
-            <a href="#" class="change-link">Change</a>
+          <div class="description">
+            <h5>
+              You can now listen to millions of songs, audiobooks, and podcasts
+              on any device anywhere you like!
+            </h5>
           </div>
-        </center>
 
-        <center>
-          <button class="proceed">Proceed to Payment</button>
-        </center>
+          <center>
+            <div class="row box">
+              <img
+                src="./images/icon-music.svg"
+                alt="icon-music"
+                width="40px"
+                height="40px"
+                style="margin: 6px"
+              />
+              <div class="price-description">
+                <span class="annual-class">Annual Plan</span>
+                <span class="price-class">$59.99/year</span>
+              </div>
+              <a href="#" class="change-link">Change</a>
+            </div>
+          </center>
 
-        <center>
-          <div class="cancel-button">Cancel Order</div>
-        </center>
+          <center>
+            <button class="proceed">Proceed to Payment</button>
+          </center>
+
+          <center>
+            <div class="cancel-button">Cancel Order</div>
+          </center>
+        </div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Your Name Here</a>.
+        </div>
       </div>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </div>
-    </div>
+    </main>
   </body>
 </html>
